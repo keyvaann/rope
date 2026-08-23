@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImageFrame from '../components/ImageFrame.astro';
+import { site } from '../content/site';
+---
+
+<BaseLayout title="About" description={`About ${site.teacherName} and ${site.name}.`}>
+  <section class="page-hero container hero-grid">
+    <div>
+      <p class="eyebrow">About the teacher</p>
+      <h1>Warm instruction for intimate skills.</h1>
+      <p class="lead">{site.bio}</p>
+    </div>
+    <ImageFrame image={site.images.teacher} variant="portrait" />
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <h2>Teaching philosophy</h2>
+    </div>
+    <div class="stack">
+      {site.philosophy.map((item) => <p class="quote-card">{item}</p>)}
+    </div>
+  </section>
+
+  <section class="section container prose narrow">
+    <h2>Experience placeholder</h2>
+    <p>
+      Add details here about training history, teaching background, community involvement, and any relevant certifications or safety education.
+    </p>
+    <p>
+      This page can stay simple: a clear bio, values, and what students can expect are often more useful than a long resume.
+    </p>
+  </section>
+</BaseLayout>

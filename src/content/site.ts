@@ -1,0 +1,104 @@
+export const site = {
+  name: 'Love & Rope Studio',
+  tagline: 'Shibari education rooted in trust, desire, and care.',
+  teacherName: 'Teacher Name',
+  email: 'hello@example.com',
+  location: 'City, Region',
+  intro:
+    'A warm, consent-centered space for learning rope as connection, presence, and embodied communication.',
+  bio:
+    'Teacher Name is a shibari educator offering group classes and private sessions for curious beginners, couples, and returning rope students. Their teaching centers communication, care, body awareness, and the slow art of building trust.',
+  philosophy: [
+    'Desire is welcome, but never rushed.',
+    'Consent, communication, and risk awareness are part of every lesson.',
+    'Rope can be beautiful, playful, intimate, meditative, and technically precise.',
+  ],
+  classes: [
+    {
+      title: 'Beginner Foundations',
+      description:
+        'Learn core rope handling, communication, simple ties, and safety practices in a supportive beginner-friendly setting.',
+      image: {
+        src: '/images/classes/class-01.jpg',
+        alt: 'Hands demonstrating a beginner rope tie',
+        label: 'Beginner class image',
+        size: '1600 x 1200',
+      },
+    },
+    {
+      title: 'Rope For Connection',
+      description:
+        'Explore pacing, attention, negotiation, and presence through accessible exercises for partners and self-tying students.',
+      image: {
+        src: '/images/classes/class-02.jpg',
+        alt: 'Two people practicing rope communication in a class setting',
+        label: 'Connection class image',
+        size: '1600 x 1200',
+      },
+    },
+    {
+      title: 'Decorative Floor Work',
+      description:
+        'A gentle introduction to elegant shapes, body-aware tension, and expressive ties without suspension.',
+      image: {
+        src: '/images/classes/class-03.jpg',
+        alt: 'Decorative rope detail arranged on fabric',
+        label: 'Decorative rope image',
+        size: '1600 x 1200',
+      },
+    },
+  ],
+  privateSessions: [
+    'One-on-one instruction for absolute beginners or students refining specific skills.',
+    'Couples sessions focused on communication, confidence, and shared vocabulary.',
+    'Small private groups for friends or partners who want a quieter learning environment.',
+  ],
+  pricing: [
+    { label: 'Private session', price: '$000 / 90 minutes' },
+    { label: 'Couples session', price: '$000 / 2 hours' },
+    { label: 'Small private group', price: 'Custom quote' },
+  ],
+  socials: [
+    { label: 'Instagram', url: 'https://instagram.com/placeholder' },
+  ],
+  images: {
+    hero: {
+      src: '/images/hero/hero-01.jpg',
+      alt: 'Close detail of rope arranged on soft fabric',
+      label: 'Hero image',
+      size: '2400 x 1600',
+    },
+    invitation: {
+      src: '/images/details/rope-detail-01.jpg',
+      alt: 'Rope detail in warm studio light',
+      label: 'Rope detail image',
+      size: '1600 x 1000',
+    },
+    teacher: {
+      src: '/images/teacher/portrait-01.jpg',
+      alt: 'Portrait of the shibari teacher',
+      label: 'Teacher portrait',
+      size: '1200 x 1500',
+    },
+    privateSession: {
+      src: '/images/private-sessions/session-01.jpg',
+      alt: 'Warm private teaching space with rope details',
+      label: 'Private session image',
+      size: '1600 x 1200',
+    },
+    contact: {
+      src: '/images/details/fabric-detail-01.jpg',
+      alt: 'Soft fabric and rope detail',
+      label: 'Contact page detail image',
+      size: '1600 x 1000',
+    },
+  },
+};
+
+export const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Classes', href: '/classes/' },
+  { label: 'Private Sessions', href: '/private-sessions/' },
+  { label: 'Contact', href: '/contact/' },
+];

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImageFrame from '../components/ImageFrame.astro';
+import { site } from '../content/site';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={site.name} description={site.intro}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Shibari education</p>
+        <h1>Rope as connection, trust, and desire.</h1>
+        <p class="lead">{site.intro}</p>
+        <div class="button-row">
+          <a class="button primary" href={`${base}private-sessions/`}>Private Sessions</a>
+          <a class="button secondary" href={`${base}classes/`}>View Classes</a>
+        </div>
+      </div>
+      <ImageFrame image={site.images.hero} variant="portrait" />
+    </div>
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <p class="eyebrow">The invitation</p>
+      <h2>A place for curiosity to move slowly.</h2>
+    </div>
+    <div class="prose">
+      <p>
+        Love & Rope Studio offers grounded shibari instruction for people who want to learn with tenderness, attention, and practical safety skills.
+      </p>
+      <p>
+        Sessions may be sensual, artistic, meditative, or technical. They are always built around consent, boundaries, and clear communication.
+      </p>
+      <ImageFrame image={site.images.invitation} variant="wide" />
+    </div>
+  </section>
+
+  <section class="section blush-panel">
+    <div class="container card-grid">
+      <article class="card">
+        <ImageFrame image={site.classes[0].image} />
+        <h3>Group Classes</h3>
+        <p>Beginner-friendly rope foundations, partner communication, and decorative floor-based ties.</p>
+        <a href={`${base}classes/`}>Explore classes</a>
+      </article>
+      <article class="card">
+        <ImageFrame image={site.images.privateSession} />
+        <h3>Private Sessions</h3>
+        <p>Personalized lessons for individuals, couples, and small groups who want a quieter learning container.</p>
+        <a href={`${base}private-sessions/`}>Book by email</a>
+      </article>
+      <article class="card">
+        <ImageFrame image={site.images.contact} />
+        <h3>Consent First</h3>
+        <p>Every class includes negotiation, body awareness, risk education, and aftercare-minded communication.</p>
+        <a href={`${base}about/`}>Read the approach</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+interface ImageInfo {
+  src: string;
+  alt: string;
+  label: string;
+  size: string;
+}
+
+interface Props {
+  image: ImageInfo;
+  variant?: 'landscape' | 'portrait' | 'wide';
+}
+
+const { image, variant = 'landscape' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const path = image.src.replace(/^\//, '');
+---
+
+<figure class={`image-frame ${variant}`}>
+  <div class="image-placeholder" role="img" aria-label={image.alt}>
+    <span class="placeholder-knot" aria-hidden="true"></span>
+    <span class="placeholder-label">Image placeholder</span>
+    <strong>{image.label}</strong>
+    <small>Replace with: {`${base}${path}`}</small>
+    <small>Recommended: {image.size}</small>
+  </div>
+  <figcaption>{image.alt}</figcaption>
+</figure>
