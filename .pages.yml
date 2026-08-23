@@ -1,0 +1,212 @@
+media:
+  - name: images
+    label: Images
+    input: public/images
+    output: /images
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+content:
+  - name: site
+    label: Site Content
+    type: file
+    path: src/content/site.json
+    format: json
+    fields:
+      - name: name
+        label: Studio Name
+        type: string
+        required: true
+      - name: tagline
+        label: Tagline
+        type: string
+      - name: teacherName
+        label: Teacher Name
+        type: string
+      - name: email
+        label: Email Address
+        type: string
+        required: true
+      - name: location
+        label: Location
+        type: string
+      - name: intro
+        label: Homepage Intro
+        type: text
+        required: true
+      - name: bio
+        label: Teacher Bio
+        type: text
+      - name: philosophy
+        label: Teaching Philosophy
+        type: string
+        list: true
+      - name: classes
+        label: Classes
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Class Title
+            type: string
+            required: true
+          - name: description
+            label: Class Description
+            type: text
+            required: true
+          - name: image
+            label: Class Image
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: classes
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+      - name: privateSessions
+        label: Private Session Bullets
+        type: string
+        list: true
+      - name: pricing
+        label: Pricing
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}: {price}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: price
+            label: Price
+            type: string
+      - name: socials
+        label: Social Links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: URL
+            type: string
+      - name: images
+        label: Page Images
+        type: object
+        fields:
+          - name: hero
+            label: Hero Image
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: hero
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+          - name: invitation
+            label: Invitation Detail Image
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: details
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+          - name: teacher
+            label: Teacher Portrait
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: teacher
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+          - name: privateSession
+            label: Private Session Image
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: private-sessions
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+          - name: contact
+            label: Contact Detail Image
+            type: object
+            fields:
+              - name: src
+                label: Image File
+                type: image
+                options:
+                  media: images
+                  path: details
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: label
+                label: Placeholder Label
+                type: string
+              - name: size
+                label: Recommended Size
+                type: string
+
+settings:
+  hide: false

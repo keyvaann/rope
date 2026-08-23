@@ -10,10 +10,27 @@ https://USERNAME.github.io/rope/
 
 ## Edit Site Content
 
-Most simple updates are in:
+The easiest way to edit the site is Pages CMS:
+
+1. Go to `https://app.pagescms.org`
+2. Sign in with GitHub
+3. Install or authorize the Pages CMS GitHub App for this repository
+4. Open `keyvaann/rope`
+5. Edit `Site Content`
+6. Save changes
+
+Pages CMS writes changes back to GitHub. GitHub Actions then rebuilds and republishes the site.
+
+The CMS is configured in:
 
 ```text
-src/content/site.ts
+.pages.yml
+```
+
+If editing files directly, most simple updates are in:
+
+```text
+src/content/site.json
 ```
 
 Edit this file to update:
@@ -34,7 +51,7 @@ Edit this file to update:
 The site currently uses styled image placeholders. Image details are listed in:
 
 ```text
-src/content/site.ts
+src/content/site.json
 ```
 
 Image files should go in:
@@ -60,7 +77,19 @@ Recommended dimensions:
 - Class and session cards: `1600 x 1200`
 - Detail images: `1600 x 1000`
 
-Use descriptive alt text in `src/content/site.ts`. Alt text should explain the image for someone who cannot see it.
+Use descriptive alt text in Pages CMS or `src/content/site.json`. Alt text should explain the image for someone who cannot see it.
+
+Pages CMS image uploads are configured to save files under:
+
+```text
+public/images/
+```
+
+and write paths like:
+
+```text
+/images/example.jpg
+```
 
 ## Edit Pages
 
