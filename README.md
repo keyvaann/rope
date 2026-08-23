@@ -1,42 +1,76 @@
-# Love & Rope Studio
+# Love & Rope Studio Website
 
-A lightweight Astro static site for a shibari teacher offering group classes and private sessions.
+This website is for Love & Rope Studio, a shibari teacher offering group classes and private sessions.
 
-The site is configured for GitHub Pages project hosting at:
+Live site:
 
 ```text
-https://USERNAME.github.io/rope/
+https://keyvaann.github.io/rope/
 ```
 
-## Edit Site Content
+## Editing The Website
 
-The easiest way to edit the site is Pages CMS:
+The easiest way to update the website is with Pages CMS.
 
 1. Go to `https://app.pagescms.org`
 2. Sign in with GitHub
-3. Install or authorize the Pages CMS GitHub App for this repository
-4. Open `keyvaann/rope`
-5. Edit the relevant section, such as `Home Page`, `Classes Page`, or `Site Settings`
-6. Save changes
+3. Open the `keyvaann/rope` website
+4. Choose the section you want to edit
+5. Make your changes
+6. Save
 
-Pages CMS writes changes back to GitHub. GitHub Actions then rebuilds and republishes the site.
+After saving, GitHub will automatically publish the updated website. This usually takes a minute or two.
 
-The CMS is configured in:
+## Editing Sections
 
-```text
-.pages.yml
-```
+Pages CMS is split into simple sections:
 
-Pages CMS is split into separate sections:
+- `Site Settings`: studio name, teacher name, email, location, and social links
+- `Home Page`: homepage headline, introduction, feature cards, and homepage images
+- `About Page`: teacher bio, teaching philosophy, experience text, and portrait image
+- `Classes Page`: class descriptions, what to bring, and safety expectations
+- `Private Sessions Page`: private session text, pricing, and preparation notes
+- `Contact Page`: contact text, privacy note, location, social link, and contact image
 
-- `Site Settings`: studio name, email, location, social links
-- `Home Page`: homepage headline, intro, feature cards, homepage images
-- `About Page`: teacher bio, philosophy, experience text, portrait image
-- `Classes Page`: class offerings, what to bring, safety text
-- `Private Sessions Page`: private session copy, pricing, preparation text
-- `Contact Page`: contact intro, privacy note, contact image
+## Adding Images
 
-If editing files directly, simple updates are split across:
+The site currently shows styled image placeholders. You can replace them with real photos in Pages CMS.
+
+When adding an image, also add clear alt text. Alt text should briefly describe the image for someone who cannot see it.
+
+Good examples:
+
+- `Hands demonstrating a beginner rope tie`
+- `Portrait of the shibari teacher`
+- `Rope arranged on soft fabric in warm light`
+
+Recommended image sizes:
+
+- Hero images: `2400 x 1600`
+- Teacher portrait: `1200 x 1500`
+- Class and session cards: `1600 x 1200`
+- Detail images: `1600 x 1000`
+
+## What To Update First
+
+Before sharing the site publicly, update these placeholders:
+
+- Studio name
+- Teacher name
+- Email address
+- Location
+- Bio
+- Class descriptions
+- Private session descriptions
+- Pricing
+- Social links
+- Images and image descriptions
+
+## For Developers
+
+This is a lightweight Astro static site deployed to GitHub Pages.
+
+Content files live in:
 
 ```text
 src/content/settings.json
@@ -47,140 +81,34 @@ src/content/pages/private-sessions.json
 src/content/pages/contact.json
 ```
 
-Edit this file to update:
-
-- Studio name
-- Teacher name
-- Email address
-- Location
-- Bio
-- Class descriptions
-- Private session descriptions
-- Placeholder pricing
-- Social links
-- Image filenames, labels, alt text, and recommended sizes
-
-## Images
-
-The site currently uses styled image placeholders. Image details are listed in:
-
-```text
-src/content/pages/*.json
-```
-
-Image files should go in:
-
-```text
-public/images/
-```
-
-Recommended folders:
-
-```text
-public/images/hero/
-public/images/teacher/
-public/images/classes/
-public/images/private-sessions/
-public/images/details/
-```
-
-Recommended dimensions:
-
-- Hero images: `2400 x 1600`
-- Teacher portrait: `1200 x 1500`
-- Class and session cards: `1600 x 1200`
-- Detail images: `1600 x 1000`
-
-Use descriptive alt text in Pages CMS or `src/content/site.json`. Alt text should explain the image for someone who cannot see it.
-
-Pages CMS image uploads are configured to save files under:
-
-```text
-public/images/
-```
-
-and write paths like:
-
-```text
-/images/example.jpg
-```
-
-## Edit Pages
-
 Page files live in:
 
 ```text
 src/pages/
 ```
 
-Each `.astro` file maps to a page on the site:
-
-- `index.astro` is the homepage
-- `about.astro` is `/about/`
-- `classes.astro` is `/classes/`
-- `private-sessions.astro` is `/private-sessions/`
-- `contact.astro` is `/contact/`
-
-## Run Locally
-
-This project uses Node 22. If you use `nvm`:
+Run locally:
 
 ```bash
 nvm use
-```
-
-Install dependencies:
-
-```bash
 npm install
-```
-
-Start a local development server:
-
-```bash
 npm run dev
 ```
 
-Build the static site:
+Build the site:
 
 ```bash
 npm run build
 ```
 
-Preview the built site:
-
-```bash
-npm run preview
-```
-
-## Deploy To GitHub Pages
-
-This repository includes a GitHub Actions workflow at:
+GitHub Pages deployment is handled by:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-In the GitHub repository settings:
+The Pages CMS configuration is:
 
-- Go to `Settings` > `Pages`
-- Set `Source` to `GitHub Actions`
-- Push to the `main` branch
-
-## Custom Domain Later
-
-The current Astro config is:
-
-```js
-site: 'https://USERNAME.github.io',
-base: '/rope'
+```text
+.pages.yml
 ```
-
-For a custom domain, update `astro.config.mjs` to something like:
-
-```js
-site: 'https://your-domain.com',
-base: '/'
-```
-
-Then configure the custom domain in GitHub Pages settings.
