@@ -156,6 +156,11 @@ p {
   text-decoration: underline;
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .nav-links a + a::before {
   color: var(--line-dark);
   content: "/";
@@ -353,6 +358,19 @@ p {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.35rem;
   font-weight: 400;
+}
+
+.faq-section {
+  background: var(--paper);
+  margin-block: 1.25rem;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: var(--muted);
 }
 
 .contact-panel {

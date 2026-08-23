@@ -11,6 +11,8 @@ const { title = settings.name, description = settings.tagline } = Astro.props;
 const pageTitle = title === settings.name ? settings.name : `${title} | ${settings.name}`;
 const base = import.meta.env.BASE_URL;
 const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
+const currentPath = `/${Astro.url.pathname.replace(base, '').replace(/^\/+/, '')}`;
+const normalizePath = (href: string) => href.replace(/\/$/, '') || '/';
 const siteUrl = Astro.site ?? new URL('https://keyvaann.github.io');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
 const socialImageUrl = new URL(withBase('/images/hero/hero-01.jpg'), siteUrl).toString();
@@ -44,7 +46,10 @@ const socialImageUrl = new URL(withBase('/images/hero/hero-01.jpg'), siteUrl).to
           <span>{settings.name}</span>
         </a>
         <div class="nav-links">
-          {navItems.map((item) => <a href={withBase(item.href)}>{item.label}</a>)}
+          {navItems.map((item) => {
+            const isActive = normalizePath(currentPath) === normalizePath(item.href);
+            return <a href={withBase(item.href)} aria-current={isActive ? 'page' : undefined}>{item.label}</a>;
+          })}
         </div>
       </nav>
     </header>

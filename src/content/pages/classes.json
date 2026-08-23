@@ -10,7 +10,9 @@
         "src": "/images/classes/class-01.jpg",
         "alt": "Natural rope arranged for beginner rope handling practice",
         "label": "Beginner rope detail",
-        "size": "1600 px wide"
+        "size": "1600 px wide",
+        "width": 1920,
+        "height": 1280
       }
     },
     {
@@ -20,7 +22,9 @@
         "src": "/images/classes/class-02.jpg",
         "alt": "Traditional rope photographed as a natural fiber study",
         "label": "Traditional rope image",
-        "size": "1600 px wide"
+        "size": "1600 px wide",
+        "width": 1795,
+        "height": 3107
       }
     },
     {
@@ -30,7 +34,9 @@
         "src": "/images/classes/class-03.jpg",
         "alt": "A handy length of rope arranged outdoors",
         "label": "Simple rope detail",
-        "size": "1400 px wide"
+        "size": "1400 px wide",
+        "width": 800,
+        "height": 600
       }
     }
   ],
@@ -43,8 +49,25 @@
     "src": "/images/details/rope-detail-01.jpg",
     "alt": "Coiled rope arranged as a natural fiber detail",
     "label": "Coiled rope detail",
-    "size": "1600 px wide"
+    "size": "1600 px wide",
+    "width": 1920,
+    "height": 1440
   },
   "safetyTitle": "Safety expectations",
-  "safetyText": "Students are expected to participate with respect, sobriety, clear consent, and care for their own and their partner's limits. Suspension and advanced risk topics are not included unless explicitly listed for a class."
+  "safetyText": "Students are expected to participate with respect, sobriety, clear consent, and care for their own and their partner's limits. Suspension and advanced risk topics are not included unless explicitly listed for a class.",
+  "faqTitle": "Class FAQ",
+  "faqItems": [
+    {
+      "question": "Do I need experience?",
+      "answer": "No experience is needed for beginner classes. Each class description can note any prerequisites."
+    },
+    {
+      "question": "Can I come without a partner?",
+      "answer": "Class formats can vary. Add details here about solo students, partner rotation, or partner-required classes."
+    },
+    {
+      "question": "What kind of rope should I bring?",
+      "answer": "Students can bring rope they already own, or this section can list recommended rope types and loaner availability."
+    }
+  ]
 }

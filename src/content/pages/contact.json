@@ -10,6 +10,8 @@
     "src": "/images/details/fabric-detail-01.jpg",
     "alt": "A simple knot photographed as a quiet rope detail",
     "label": "Knot detail image",
-    "size": "1600 px wide"
+    "size": "1600 px wide",
+    "width": 1920,
+    "height": 1440
   }
 }

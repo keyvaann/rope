@@ -23,21 +23,45 @@
       "price": "Custom quote"
     }
   ],
+  "safetyTitle": "Boundaries and safety",
+  "safetyText": [
+    "Private sessions begin with conversation about goals, boundaries, access needs, and risk awareness.",
+    "Activities can be adjusted or paused at any time. Add studio-specific limits, cancellation policies, and screening details here."
+  ],
   "beforeTitle": "Before a session",
   "beforeText": [
     "Email with your experience level, what you would like to learn, and anything you want the teacher to know about access needs, boundaries, or injuries.",
     "Please include only what you are comfortable sharing by email."
   ],
+  "faqTitle": "Private session FAQ",
+  "faqItems": [
+    {
+      "question": "Can sessions be tailored for beginners?",
+      "answer": "Yes. Private sessions can start with basic rope handling, communication, and simple floor-based ties."
+    },
+    {
+      "question": "Can couples or small groups book together?",
+      "answer": "Yes. Add details here about group size, pricing, and what information to include when inquiring."
+    },
+    {
+      "question": "What should I share before booking?",
+      "answer": "Share your experience level, learning goals, boundaries, access needs, and any relevant injuries only if you are comfortable doing so."
+    }
+  ],
   "image": {
     "src": "/images/private-sessions/session-01.jpg",
     "alt": "Old cord detail with a soft neutral texture",
     "label": "Private session rope detail",
-    "size": "1400 px wide"
+    "size": "1400 px wide",
+    "width": 1000,
+    "height": 572
   },
   "detailImage": {
     "src": "/images/details/fabric-detail-01.jpg",
     "alt": "A simple knot photographed as a quiet rope detail",
     "label": "Knot detail image",
-    "size": "1600 px wide"
+    "size": "1600 px wide",
+    "width": 1920,
+    "height": 1440
   }
 }

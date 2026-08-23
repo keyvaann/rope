@@ -37,4 +37,16 @@ import { classesPage } from '../content/site';
       <p>{classesPage.safetyText}</p>
     </div>
   </section>
+
+  <section class="section container narrow faq-section">
+    <h2>{classesPage.faqTitle}</h2>
+    <div class="stack">
+      {classesPage.faqItems.map((item) => (
+        <article class="faq-item">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
+  </section>
 </BaseLayout>

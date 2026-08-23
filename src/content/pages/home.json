@@ -36,25 +36,33 @@
       "src": "/images/hero/hero-01.jpg",
       "alt": "Close-up of natural rope fibers",
       "label": "Natural rope close-up",
-      "size": "1800 px wide"
+      "size": "1800 px wide",
+      "width": 1920,
+      "height": 1440
     },
     "invitation": {
       "src": "/images/details/rope-detail-01.jpg",
       "alt": "Coiled rope arranged as a natural fiber detail",
       "label": "Coiled rope detail",
-      "size": "1600 px wide"
+      "size": "1600 px wide",
+      "width": 1920,
+      "height": 1440
     },
     "privateSession": {
       "src": "/images/private-sessions/session-01.jpg",
       "alt": "Old cord detail with a soft neutral texture",
       "label": "Private session rope detail",
-      "size": "1400 px wide"
+      "size": "1400 px wide",
+      "width": 1000,
+      "height": 572
     },
     "contact": {
       "src": "/images/details/fabric-detail-01.jpg",
       "alt": "A simple knot photographed as a quiet rope detail",
       "label": "Knot detail image",
-      "size": "1600 px wide"
+      "size": "1600 px wide",
+      "width": 1920,
+      "height": 1440
     }
   }
 }

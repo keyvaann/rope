@@ -4,6 +4,8 @@ interface ImageInfo {
   alt: string;
   label: string;
   size: string;
+  width?: number;
+  height?: number;
 }
 
 interface Props {
@@ -26,7 +28,7 @@ const imageDimensions: Record<string, { width: number; height: number }> = {
   '/images/private-sessions/session-01.jpg': { width: 1000, height: 572 },
   '/images/teacher/about-01.jpg': { width: 1920, height: 1280 },
 };
-const dimensions = imageDimensions[image.src];
+const dimensions = image.width && image.height ? { width: image.width, height: image.height } : imageDimensions[image.src];
 ---
 
 <figure class={`image-frame ${variant}`}>

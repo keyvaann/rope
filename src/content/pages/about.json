@@ -17,6 +17,8 @@
     "src": "/images/teacher/about-01.jpg",
     "alt": "Natural rope detail for the about page",
     "label": "About page rope detail",
-    "size": "1400 px wide"
+    "size": "1400 px wide",
+    "width": 1920,
+    "height": 1280
   }
 }

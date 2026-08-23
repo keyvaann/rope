@@ -42,9 +42,30 @@ const inquiryHref = settings.email ? `mailto:${settings.email}?subject=Private%2
     </div>
   </section>
 
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.safetyTitle}</h2>
+    </div>
+    <div class="prose">
+      {privateSessionsPage.safetyText.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </section>
+
   <section class="section container prose narrow">
     <h2>{privateSessionsPage.beforeTitle}</h2>
     {privateSessionsPage.beforeText.map((paragraph) => <p>{paragraph}</p>)}
     <ImageFrame image={privateSessionsPage.detailImage} variant="wide" />
+  </section>
+
+  <section class="section container narrow faq-section">
+    <h2>{privateSessionsPage.faqTitle}</h2>
+    <div class="stack">
+      {privateSessionsPage.faqItems.map((item) => (
+        <article class="faq-item">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
   </section>
 </BaseLayout>
