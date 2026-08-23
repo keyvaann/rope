@@ -8,7 +8,7 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
 ---
 
 <BaseLayout title={site.name} description={site.intro}>
-  <section class="hero">
+  <section class="hero hero-feature">
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Shibari education</p>
@@ -23,7 +23,7 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
     </div>
   </section>
 
-  <section class="section container two-column">
+  <section class="section container two-column invitation-panel">
     <div>
       <p class="eyebrow">The invitation</p>
       <h2>A place for curiosity to move slowly.</h2>
@@ -39,7 +39,7 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
     </div>
   </section>
 
-  <section class="section blush-panel">
+  <section class="section blush-panel feature-band">
     <div class="container card-grid">
       <article class="card">
         <ImageFrame image={site.classes[0].image} />

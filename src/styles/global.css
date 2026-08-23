@@ -10,7 +10,9 @@
   --surface: #1b1218;
   --surface-soft: #261722;
   --line: rgb(247 234 220 / 12%);
-  --shadow: 0 30px 90px rgb(0 0 0 / 42%);
+  --line-strong: rgb(200 164 106 / 24%);
+  --shadow: 0 34px 100px rgb(0 0 0 / 48%);
+  --shadow-soft: 0 18px 55px rgb(0 0 0 / 28%);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -27,10 +29,33 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
+    linear-gradient(90deg, rgb(0 0 0 / 36%), transparent 18%, transparent 82%, rgb(0 0 0 / 38%)),
     radial-gradient(circle at 14% 8%, rgb(143 47 77 / 28%), transparent 33rem),
     radial-gradient(circle at 86% 22%, rgb(200 164 106 / 12%), transparent 28rem),
     radial-gradient(circle at 50% 95%, rgb(90 24 48 / 18%), transparent 30rem),
     linear-gradient(180deg, #0c090b, var(--wine-dark) 48%, #0f0b0e);
+  position: relative;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgb(247 234 220 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(247 234 220 / 2%) 1px, transparent 1px);
+  background-size: 72px 72px;
+  content: "";
+  inset: 0;
+  mask-image: radial-gradient(circle at 50% 12%, black, transparent 72%);
+  opacity: 0.22;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 body,
@@ -76,6 +101,7 @@ h1 {
   font-size: clamp(3rem, 10vw, 6.7rem);
   letter-spacing: -0.065em;
   margin-bottom: 1.3rem;
+  text-shadow: 0 20px 60px rgb(0 0 0 / 42%), 0 0 36px rgb(143 47 77 / 20%);
 }
 
 h2 {
@@ -120,8 +146,9 @@ p {
 
 .site-header {
   border-bottom: 1px solid var(--line);
-  background: rgb(17 13 16 / 82%);
+  background: linear-gradient(180deg, rgb(17 13 16 / 90%), rgb(17 13 16 / 72%));
   backdrop-filter: blur(16px);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 22%);
   position: sticky;
   top: 0;
   z-index: 5;
@@ -142,6 +169,12 @@ p {
   font-weight: 700;
   text-decoration: none;
   color: var(--ivory);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.brand:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
 }
 
 .brand-mark {
@@ -174,16 +207,55 @@ p {
 .nav-links a {
   color: rgb(247 234 220 / 76%);
   font-size: 0.94rem;
+  position: relative;
   text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.nav-links a::after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  bottom: -0.35rem;
+  content: "";
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transform: scaleX(0.4);
+  transition: opacity 180ms ease, transform 180ms ease;
+  width: 100%;
 }
 
 .nav-links a:hover {
   color: var(--gold);
 }
 
+.nav-links a:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
 .hero,
 .page-hero {
   padding-block: clamp(5rem, 12vw, 9rem);
+  position: relative;
+}
+
+.hero > *,
+.page-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before,
+.page-hero::before {
+  background:
+    radial-gradient(circle at 28% 38%, rgb(143 47 77 / 22%), transparent 28rem),
+    radial-gradient(circle at 74% 46%, rgb(200 164 106 / 12%), transparent 23rem);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
 }
 
 .hero-grid,
@@ -202,6 +274,15 @@ p {
   color: var(--muted);
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   margin-bottom: 2rem;
+}
+
+.hero-copy .lead::after {
+  background: linear-gradient(90deg, var(--gold), rgb(143 47 77 / 78%), transparent);
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 1.7rem;
+  width: min(19rem, 80%);
 }
 
 .eyebrow {
@@ -226,17 +307,32 @@ p {
   justify-content: center;
   padding: 0.9rem 1.3rem;
   text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .button.primary {
   background: linear-gradient(135deg, var(--gold), #9f7544);
   color: #170912;
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 46px rgb(200 164 106 / 16%), 0 16px 55px rgb(0 0 0 / 38%);
 }
 
 .button.secondary {
   border: 1px solid rgb(200 164 106 / 42%);
+  background: rgb(247 234 220 / 3%);
   color: var(--ivory);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary:hover {
+  box-shadow: 0 22px 56px rgb(200 164 106 / 24%), 0 18px 60px rgb(0 0 0 / 46%);
+}
+
+.button.secondary:hover {
+  border-color: rgb(200 164 106 / 72%);
+  box-shadow: inset 0 0 0 1px rgb(200 164 106 / 18%), var(--shadow-soft);
 }
 
 .hero-card {
@@ -294,6 +390,36 @@ p {
 
 .section {
   padding-block: clamp(3.5rem, 8vw, 6rem);
+  position: relative;
+}
+
+.invitation-panel {
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 4rem);
+  position: relative;
+}
+
+.invitation-panel::before {
+  background: linear-gradient(180deg, rgb(247 234 220 / 9%), transparent);
+  border-radius: inherit;
+  content: "";
+  inset: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.invitation-panel::after {
+  background: linear-gradient(180deg, var(--gold), transparent);
+  content: "";
+  height: calc(100% - 4rem);
+  left: 50%;
+  opacity: 0.26;
+  position: absolute;
+  top: 2rem;
+  width: 1px;
 }
 
 .prose {
@@ -303,6 +429,21 @@ p {
 
 .image-frame {
   margin: 0;
+  position: relative;
+}
+
+.hero-feature .image-frame {
+  filter: drop-shadow(0 34px 80px rgb(0 0 0 / 48%));
+}
+
+.hero-feature .image-frame::before {
+  border: 1px solid var(--line-strong);
+  border-radius: 1.7rem;
+  content: "";
+  inset: 1rem -0.8rem -0.8rem 1rem;
+  opacity: 0.7;
+  position: absolute;
+  z-index: -1;
 }
 
 .prose .image-frame {
@@ -321,9 +462,9 @@ p {
     radial-gradient(circle at 80% 15%, rgb(143 47 77 / 48%), transparent 17rem),
     radial-gradient(circle at 18% 12%, rgb(200 164 106 / 18%), transparent 12rem),
     var(--wine-dark);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 1.35rem;
-  box-shadow: var(--shadow);
+  box-shadow: inset 0 1px 0 rgb(247 234 220 / 12%), inset 0 -40px 90px rgb(0 0 0 / 34%), var(--shadow);
   color: var(--ivory);
   display: flex;
   flex-direction: column;
@@ -347,6 +488,7 @@ p {
 .image-placeholder::after {
   border: 1px solid rgb(200 164 106 / 28%);
   border-radius: 999px;
+  box-shadow: 0 0 50px rgb(200 164 106 / 8%);
   content: "";
   height: 12rem;
   position: absolute;
@@ -359,6 +501,14 @@ p {
 .image-placeholder::after {
   right: -5rem;
   top: 5.2rem;
+}
+
+.image-sheen {
+  background: linear-gradient(115deg, transparent 10%, rgb(247 234 220 / 10%) 34%, transparent 55%);
+  inset: 0;
+  opacity: 0.45;
+  position: absolute;
+  transform: translateX(-30%);
 }
 
 .placeholder-knot {
@@ -394,6 +544,16 @@ p {
   z-index: 1;
 }
 
+.placeholder-copy {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgb(12 9 11 / 28%), rgb(12 9 11 / 52%));
+  border: 1px solid rgb(247 234 220 / 8%);
+  border-radius: 1rem;
+  padding: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
 .image-placeholder strong {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.45rem, 4vw, 2.4rem);
@@ -423,9 +583,15 @@ p {
 .blush-panel,
 .consent-band {
   background:
+    radial-gradient(circle at 22% 0%, rgb(143 47 77 / 18%), transparent 24rem),
+    radial-gradient(circle at 78% 100%, rgb(200 164 106 / 8%), transparent 25rem),
     linear-gradient(180deg, rgb(27 18 24 / 82%), rgb(18 12 16 / 86%)),
     var(--surface);
   border-block: 1px solid var(--line);
+}
+
+.feature-band {
+  box-shadow: inset 0 22px 80px rgb(0 0 0 / 28%), inset 0 -18px 70px rgb(0 0 0 / 22%);
 }
 
 .card-grid,
@@ -443,10 +609,33 @@ p {
   border: 1px solid var(--line);
   border-radius: 1.5rem;
   box-shadow: 0 24px 70px rgb(0 0 0 / 28%);
+  position: relative;
+}
+
+.card::before,
+.quote-card::before,
+.price-card::before,
+.contact-panel::before {
+  background: linear-gradient(90deg, transparent, rgb(200 164 106 / 42%), transparent);
+  border-radius: inherit;
+  content: "";
+  height: 1px;
+  left: 1rem;
+  opacity: 0.78;
+  position: absolute;
+  right: 1rem;
+  top: 0;
 }
 
 .card {
   padding: 1.5rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.card:hover {
+  border-color: rgb(200 164 106 / 32%);
+  box-shadow: 0 34px 90px rgb(0 0 0 / 38%);
+  transform: translateY(-4px);
 }
 
 .card p {
@@ -465,6 +654,16 @@ p {
   line-height: 1.35;
   margin: 0;
   padding: 1.3rem;
+}
+
+.quote-card::after {
+  color: rgb(200 164 106 / 28%);
+  content: "\201C";
+  font-size: 5rem;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: 0.35rem;
 }
 
 .price-card {
@@ -494,6 +693,7 @@ p {
   border-top: 1px solid var(--line);
   color: rgb(247 234 220 / 70%);
   padding-block: 2.5rem;
+  box-shadow: inset 0 18px 50px rgb(0 0 0 / 48%);
 }
 
 .site-footer a,
@@ -529,5 +729,13 @@ p {
 
   .image-frame.portrait .image-placeholder {
     min-height: 18rem;
+  }
+
+  .invitation-panel::after {
+    display: none;
+  }
+
+  .hero-feature .image-frame::before {
+    inset: 0.7rem -0.45rem -0.45rem 0.7rem;
   }
 }
