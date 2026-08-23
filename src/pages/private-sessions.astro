@@ -28,6 +28,33 @@ const inquiryHref = settings.email ? `mailto:${settings.email}?subject=Private%2
     </div>
   </section>
 
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.expectTitle}</h2>
+    </div>
+    <div class="prose">
+      {privateSessionsPage.expectText.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.topicsTitle}</h2>
+    </div>
+    <div class="list-panel">
+      {privateSessionsPage.topics.map((topic) => <span>{topic}</span>)}
+    </div>
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.notOfferedTitle}</h2>
+    </div>
+    <div class="stack">
+      {privateSessionsPage.notOffered.map((item) => <p class="quote-card">{item}</p>)}
+    </div>
+  </section>
+
   <section class="section blush-panel">
     <div class="container">
       <p class="eyebrow">{privateSessionsPage.pricingEyebrow}</p>
@@ -51,10 +78,44 @@ const inquiryHref = settings.email ? `mailto:${settings.email}?subject=Private%2
     </div>
   </section>
 
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.practicalTitle}</h2>
+    </div>
+    <div class="prose">
+      {privateSessionsPage.practicalText.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.clothingTitle}</h2>
+    </div>
+    <div class="prose">
+      <p>{privateSessionsPage.clothingText}</p>
+    </div>
+  </section>
+
   <section class="section container prose narrow">
     <h2>{privateSessionsPage.beforeTitle}</h2>
     {privateSessionsPage.beforeText.map((paragraph) => <p>{paragraph}</p>)}
     <ImageFrame image={privateSessionsPage.detailImage} variant="wide" />
+  </section>
+
+  <section class="section container two-column">
+    <div>
+      <h2>{privateSessionsPage.bookingTitle}</h2>
+    </div>
+    <div class="stack numbered-stack">
+      {privateSessionsPage.bookingSteps.map((step, index) => (
+        <p class="quote-card"><span>{index + 1}</span>{step}</p>
+      ))}
+    </div>
+  </section>
+
+  <section class="section container prose narrow">
+    <h2>{privateSessionsPage.cancellationTitle}</h2>
+    <p>{privateSessionsPage.cancellationText}</p>
   </section>
 
   <section class="section container narrow faq-section">

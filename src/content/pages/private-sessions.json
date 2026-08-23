@@ -8,6 +8,33 @@
     "Couples sessions focused on communication, confidence, and shared vocabulary.",
     "Small private groups for friends or partners who want a quieter learning environment."
   ],
+  "expectTitle": "What to expect",
+  "expectText": [
+    "Private sessions are shaped around the person or people attending. The pace, topic, and depth can be adjusted before and during the session.",
+    "If you are not sure where to begin, the session can start with simple questions about experience level, curiosity, comfort, and learning goals."
+  ],
+  "topicsTitle": "Possible topics",
+  "topics": [
+    "Beginner rope handling",
+    "Communication and negotiation",
+    "Decorative floor-based ties",
+    "Partner connection and pacing",
+    "Self-tying foundations",
+    "Body awareness and comfort"
+  ],
+  "notOfferedTitle": "What is not offered",
+  "notOffered": [
+    "Advanced suspension unless specifically arranged",
+    "Techniques outside the teacher's comfort or training",
+    "Sessions without clear consent, sobriety, and communication"
+  ],
+  "practicalTitle": "Practical details",
+  "practicalText": [
+    "Exact location, timing, access details, and preparation notes can be shared after inquiry.",
+    "Students are welcome to ask questions before committing to a session."
+  ],
+  "clothingTitle": "Clothing and comfort",
+  "clothingText": "Wear clothing that allows movement and helps you feel comfortable. Avoid hard zippers, sharp accessories, or anything that makes body awareness difficult.",
   "pricingEyebrow": "Session options",
   "pricing": [
     {
@@ -33,6 +60,14 @@
     "Email with your experience level, what you would like to learn, and anything you want the teacher to know about access needs, boundaries, or injuries.",
     "Please include only what you are comfortable sharing by email."
   ],
+  "bookingTitle": "Booking flow",
+  "bookingSteps": [
+    "Send an inquiry with your goals and any practical questions.",
+    "Agree on the session format, timing, and location details.",
+    "Confirm any preparation notes, payment details, and cancellation policy."
+  ],
+  "cancellationTitle": "Cancellation note",
+  "cancellationText": "Add the studio cancellation and deposit policy here once booking logistics are finalized.",
   "faqTitle": "Private session FAQ",
   "faqItems": [
     {

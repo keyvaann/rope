@@ -60,9 +60,16 @@ const socialImageUrl = new URL(withBase('/images/hero/hero-01.jpg'), siteUrl).to
       <div class="container footer-grid">
         <div>
           <p class="eyebrow">{settings.name}</p>
-          <p>Shibari teaching with care, curiosity, and clear consent.</p>
+          <p>{settings.footerTagline}</p>
         </div>
         <div>
+          <p class="eyebrow">Menu</p>
+          <div class="footer-links">
+            {settings.footerLinks.map((link) => <a href={withBase(link.href)}>{link.label}</a>)}
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Contact</p>
           <p>{settings.location}</p>
           {settings.email ? <a href={`mailto:${settings.email}`}>{settings.email}</a> : <p>Email address coming soon.</p>}
         </div>

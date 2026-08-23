@@ -10,12 +10,19 @@ interface SocialLink {
   url: string;
 }
 
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
 interface SettingsContent {
   name: string;
   tagline: string;
+  footerTagline: string;
   teacherName: string;
   email: string;
   location: string;
+  footerLinks: FooterLink[];
   socials: SocialLink[];
 }
 

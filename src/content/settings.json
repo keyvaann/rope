@@ -1,8 +1,27 @@
 {
   "name": "Love & Rope Studio",
   "tagline": "Shibari education rooted in trust, desire, and care.",
+  "footerTagline": "Rope learning with care, curiosity, and clear consent.",
   "teacherName": "Love & Rope Studio",
   "email": "",
   "location": "Location shared after inquiry",
+  "footerLinks": [
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Classes",
+      "href": "/classes/"
+    },
+    {
+      "label": "Private Sessions",
+      "href": "/private-sessions/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
   "socials": []
 }

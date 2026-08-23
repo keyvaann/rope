@@ -19,6 +19,10 @@ import { contactPage, settings } from '../content/site';
       <ImageFrame image={contactPage.image} variant="wide" />
     </div>
     <div class="prose">
+      <h2>{contactPage.inquiryTitle}</h2>
+      <ul class="plain-list">
+        {contactPage.inquiryItems.map((item) => <li>{item}</li>)}
+      </ul>
       <h2>{contactPage.privacyTitle}</h2>
       <p>{contactPage.privacyText}</p>
       <h2>{contactPage.socialTitle}</h2>

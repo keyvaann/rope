@@ -20,6 +20,9 @@ content:
       - name: tagline
         label: Tagline
         type: string
+      - name: footerTagline
+        label: Footer Tagline
+        type: text
       - name: teacherName
         label: Teacher Name
         type: string
@@ -29,6 +32,20 @@ content:
       - name: location
         label: Location
         type: string
+      - name: footerLinks
+        label: Footer Links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: href
+            label: Link Path
+            type: string
       - name: socials
         label: Social Links
         type: object
@@ -204,6 +221,23 @@ content:
         label: What To Bring Paragraphs
         type: text
         list: true
+      - name: detailsTitle
+        label: Class Details Heading
+        type: string
+      - name: details
+        label: Class Details
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields: &sectionCardFields
+          - name: title
+            label: Title
+            type: string
+          - name: text
+            label: Text
+            type: text
       - name: detailImage
         label: Detail Image
         type: object
@@ -251,6 +285,40 @@ content:
         label: Private Session Bullets
         type: string
         list: true
+      - name: expectTitle
+        label: What To Expect Heading
+        type: string
+      - name: expectText
+        label: What To Expect Paragraphs
+        type: text
+        list: true
+      - name: topicsTitle
+        label: Possible Topics Heading
+        type: string
+      - name: topics
+        label: Possible Topics
+        type: string
+        list: true
+      - name: notOfferedTitle
+        label: What Is Not Offered Heading
+        type: string
+      - name: notOffered
+        label: What Is Not Offered Items
+        type: string
+        list: true
+      - name: practicalTitle
+        label: Practical Details Heading
+        type: string
+      - name: practicalText
+        label: Practical Details Paragraphs
+        type: text
+        list: true
+      - name: clothingTitle
+        label: Clothing Heading
+        type: string
+      - name: clothingText
+        label: Clothing Text
+        type: text
       - name: pricingEyebrow
         label: Pricing Eyebrow
         type: string
@@ -279,6 +347,19 @@ content:
         label: Before Session Paragraphs
         type: text
         list: true
+      - name: bookingTitle
+        label: Booking Flow Heading
+        type: string
+      - name: bookingSteps
+        label: Booking Steps
+        type: string
+        list: true
+      - name: cancellationTitle
+        label: Cancellation Heading
+        type: string
+      - name: cancellationText
+        label: Cancellation Text
+        type: text
       - name: faqTitle
         label: FAQ Heading
         type: string
@@ -314,6 +395,13 @@ content:
       - name: locationTitle
         label: Location Heading
         type: string
+      - name: inquiryTitle
+        label: Inquiry Checklist Heading
+        type: string
+      - name: inquiryItems
+        label: Inquiry Checklist Items
+        type: string
+        list: true
       - name: privacyTitle
         label: Privacy Heading
         type: string

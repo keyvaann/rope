@@ -3,6 +3,14 @@
   "title": "Begin with a simple hello.",
   "intro": "For classes, private sessions, or questions about whether this is the right fit, contact details can be added here.",
   "locationTitle": "Location",
+  "inquiryTitle": "What to include",
+  "inquiryItems": [
+    "Your experience level with rope",
+    "Whether you are interested in classes, private sessions, or general questions",
+    "What you would like to learn or explore",
+    "Any access needs or scheduling constraints",
+    "Boundaries, injuries, or sensitivities only if you are comfortable sharing them"
+  ],
   "privacyTitle": "Privacy note",
   "privacyText": "Please include only what you are comfortable sharing by email. Intake forms or booking tools can be added later if they become useful.",
   "socialTitle": "Social",

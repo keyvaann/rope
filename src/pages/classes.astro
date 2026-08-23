@@ -31,6 +31,20 @@ import { classesPage } from '../content/site';
     </div>
   </section>
 
+  <section class="section container two-column">
+    <div>
+      <h2>{classesPage.detailsTitle}</h2>
+    </div>
+    <div class="stack">
+      {classesPage.details.map((detail) => (
+        <article class="info-card">
+          <h3>{detail.title}</h3>
+          <p>{detail.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section consent-band">
     <div class="container narrow">
       <h2>{classesPage.safetyTitle}</h2>

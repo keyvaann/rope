@@ -45,6 +45,21 @@
     "Comfortable clothing that allows movement, water, a notebook if you like, and any rope you already own.",
     "Loaner rope availability can be added here once class logistics are finalized."
   ],
+  "detailsTitle": "How classes work",
+  "details": [
+    {
+      "title": "Levels",
+      "text": "Beginner classes can start from the first knots. More focused classes can list prerequisites such as basic rope handling or specific ties."
+    },
+    {
+      "title": "Partner or solo",
+      "text": "Some classes work well for pairs, while others can include self-tying or solo practice. Add class-specific participation details here."
+    },
+    {
+      "title": "Group size",
+      "text": "Smaller groups leave more room for personal attention, questions, pacing, and careful feedback."
+    }
+  ],
   "detailImage": {
     "src": "/images/details/rope-detail-01.jpg",
     "alt": "Coiled rope arranged as a natural fiber detail",
