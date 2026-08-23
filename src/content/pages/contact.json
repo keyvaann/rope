@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Contact",
+  "title": "Begin with a simple hello.",
+  "intro": "For classes, private sessions, or questions about whether this is the right fit, send an email.",
+  "locationTitle": "Location",
+  "privacyTitle": "Privacy note",
+  "privacyText": "Please include only what you are comfortable sharing by email. Intake forms or booking tools can be added later if they become useful.",
+  "socialTitle": "Social",
+  "image": {
+    "src": "/images/details/fabric-detail-01.jpg",
+    "alt": "Soft fabric and rope detail",
+    "label": "Contact page detail image",
+    "size": "1600 x 1000"
+  }
+}

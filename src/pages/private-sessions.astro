@@ -1,36 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageFrame from '../components/ImageFrame.astro';
-import { site } from '../content/site';
+import { privateSessionsPage, settings } from '../content/site';
 ---
 
 <BaseLayout title="Private Sessions" description="Private shibari instruction for individuals, couples, and small groups.">
   <section class="page-hero container hero-grid">
     <div>
-      <p class="eyebrow">Private instruction</p>
-      <h1>Personal rope lessons shaped around your curiosity.</h1>
-      <p class="lead">
-        Private sessions create room for questions, pacing, and personal goals, from first knots to deeper partner communication.
-      </p>
-      <a class="button primary" href={`mailto:${site.email}?subject=Private%20Session%20Inquiry`}>Email to inquire</a>
+      <p class="eyebrow">{privateSessionsPage.eyebrow}</p>
+      <h1>{privateSessionsPage.title}</h1>
+      <p class="lead">{privateSessionsPage.intro}</p>
+      <a class="button primary" href={`mailto:${settings.email}?subject=Private%20Session%20Inquiry`}>Email to inquire</a>
     </div>
-    <ImageFrame image={site.images.privateSession} variant="portrait" />
+    <ImageFrame image={privateSessionsPage.image} variant="portrait" />
   </section>
 
   <section class="section container two-column">
     <div>
-      <h2>Good for</h2>
+      <h2>{privateSessionsPage.bulletsTitle}</h2>
     </div>
     <div class="stack">
-      {site.privateSessions.map((item) => <p class="quote-card">{item}</p>)}
+      {privateSessionsPage.bullets.map((item) => <p class="quote-card">{item}</p>)}
     </div>
   </section>
 
   <section class="section blush-panel">
     <div class="container">
-      <p class="eyebrow">Placeholder pricing</p>
+      <p class="eyebrow">{privateSessionsPage.pricingEyebrow}</p>
       <div class="price-grid">
-        {site.pricing.map((item) => (
+        {privateSessionsPage.pricing.map((item) => (
           <div class="price-card">
             <span>{item.label}</span>
             <strong>{item.price}</strong>
@@ -41,11 +39,8 @@ import { site } from '../content/site';
   </section>
 
   <section class="section container prose narrow">
-    <h2>Before a session</h2>
-    <p>
-      Email with your experience level, what you would like to learn, and anything you want the teacher to know about access needs, boundaries, or injuries.
-    </p>
-    <p>Please include only what you are comfortable sharing by email.</p>
-    <ImageFrame image={site.images.contact} variant="wide" />
+    <h2>{privateSessionsPage.beforeTitle}</h2>
+    {privateSessionsPage.beforeText.map((paragraph) => <p>{paragraph}</p>)}
+    <ImageFrame image={privateSessionsPage.detailImage} variant="wide" />
   </section>
 </BaseLayout>

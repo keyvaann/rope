@@ -1,0 +1,43 @@
+{
+  "eyebrow": "Private instruction",
+  "title": "Personal rope lessons shaped around your curiosity.",
+  "intro": "Private sessions create room for questions, pacing, and personal goals, from first knots to deeper partner communication.",
+  "bulletsTitle": "Good for",
+  "bullets": [
+    "One-on-one instruction for absolute beginners or students refining specific skills.",
+    "Couples sessions focused on communication, confidence, and shared vocabulary.",
+    "Small private groups for friends or partners who want a quieter learning environment."
+  ],
+  "pricingEyebrow": "Placeholder pricing",
+  "pricing": [
+    {
+      "label": "Private session",
+      "price": "$000 / 90 minutes"
+    },
+    {
+      "label": "Couples session",
+      "price": "$000 / 2 hours"
+    },
+    {
+      "label": "Small private group",
+      "price": "Custom quote"
+    }
+  ],
+  "beforeTitle": "Before a session",
+  "beforeText": [
+    "Email with your experience level, what you would like to learn, and anything you want the teacher to know about access needs, boundaries, or injuries.",
+    "Please include only what you are comfortable sharing by email."
+  ],
+  "image": {
+    "src": "/images/private-sessions/session-01.jpg",
+    "alt": "Warm private teaching space with rope details",
+    "label": "Private session image",
+    "size": "1600 x 1200"
+  },
+  "detailImage": {
+    "src": "/images/details/fabric-detail-01.jpg",
+    "alt": "Soft fabric and rope detail",
+    "label": "Contact page detail image",
+    "size": "1600 x 1000"
+  }
+}

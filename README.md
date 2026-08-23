@@ -16,7 +16,7 @@ The easiest way to edit the site is Pages CMS:
 2. Sign in with GitHub
 3. Install or authorize the Pages CMS GitHub App for this repository
 4. Open `keyvaann/rope`
-5. Edit `Site Content`
+5. Edit the relevant section, such as `Home Page`, `Classes Page`, or `Site Settings`
 6. Save changes
 
 Pages CMS writes changes back to GitHub. GitHub Actions then rebuilds and republishes the site.
@@ -27,10 +27,24 @@ The CMS is configured in:
 .pages.yml
 ```
 
-If editing files directly, most simple updates are in:
+Pages CMS is split into separate sections:
+
+- `Site Settings`: studio name, email, location, social links
+- `Home Page`: homepage headline, intro, feature cards, homepage images
+- `About Page`: teacher bio, philosophy, experience text, portrait image
+- `Classes Page`: class offerings, what to bring, safety text
+- `Private Sessions Page`: private session copy, pricing, preparation text
+- `Contact Page`: contact intro, privacy note, contact image
+
+If editing files directly, simple updates are split across:
 
 ```text
-src/content/site.json
+src/content/settings.json
+src/content/pages/home.json
+src/content/pages/about.json
+src/content/pages/classes.json
+src/content/pages/private-sessions.json
+src/content/pages/contact.json
 ```
 
 Edit this file to update:
@@ -51,7 +65,7 @@ Edit this file to update:
 The site currently uses styled image placeholders. Image details are listed in:
 
 ```text
-src/content/site.json
+src/content/pages/*.json
 ```
 
 Image files should go in:

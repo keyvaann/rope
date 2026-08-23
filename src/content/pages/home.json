@@ -1,0 +1,60 @@
+{
+  "heroEyebrow": "Shibari education",
+  "heroTitle": "Rope as connection, trust, and desire.",
+  "intro": "A warm, consent-centered space for learning rope as connection, presence, and embodied communication.",
+  "invitationEyebrow": "The invitation",
+  "invitationTitle": "A place for curiosity to move slowly.",
+  "invitationText": [
+    "Love & Rope Studio offers grounded shibari instruction for people who want to learn with tenderness, attention, and practical safety skills.",
+    "Sessions may be sensual, artistic, meditative, or technical. They are always built around consent, boundaries, and clear communication."
+  ],
+  "cards": [
+    {
+      "title": "Group Classes",
+      "description": "Beginner-friendly rope foundations, partner communication, and decorative floor-based ties.",
+      "href": "/classes/",
+      "linkLabel": "Explore classes",
+      "imageKey": "classOne"
+    },
+    {
+      "title": "Private Sessions",
+      "description": "Personalized lessons for individuals, couples, and small groups who want a quieter learning container.",
+      "href": "/private-sessions/",
+      "linkLabel": "Book by email",
+      "imageKey": "privateSession"
+    },
+    {
+      "title": "Consent First",
+      "description": "Every class includes negotiation, body awareness, risk education, and aftercare-minded communication.",
+      "href": "/about/",
+      "linkLabel": "Read the approach",
+      "imageKey": "contact"
+    }
+  ],
+  "images": {
+    "hero": {
+      "src": "/images/hero/hero-01.jpg",
+      "alt": "Close detail of rope arranged on soft fabric",
+      "label": "Hero image",
+      "size": "2400 x 1600"
+    },
+    "invitation": {
+      "src": "/images/details/rope-detail-01.jpg",
+      "alt": "Rope detail in warm studio light",
+      "label": "Rope detail image",
+      "size": "1600 x 1000"
+    },
+    "privateSession": {
+      "src": "/images/private-sessions/session-01.jpg",
+      "alt": "Warm private teaching space with rope details",
+      "label": "Private session image",
+      "size": "1600 x 1200"
+    },
+    "contact": {
+      "src": "/images/details/fabric-detail-01.jpg",
+      "alt": "Soft fabric and rope detail",
+      "label": "Contact page detail image",
+      "size": "1600 x 1000"
+    }
+  }
+}

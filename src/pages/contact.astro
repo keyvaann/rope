@@ -1,30 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageFrame from '../components/ImageFrame.astro';
-import { site } from '../content/site';
+import { contactPage, settings } from '../content/site';
 ---
 
-<BaseLayout title="Contact" description={`Contact ${site.name} by email.`}>
+<BaseLayout title="Contact" description={`Contact ${settings.name} by email.`}>
   <section class="page-hero container narrow contact-panel">
-    <p class="eyebrow">Contact</p>
-    <h1>Begin with a simple hello.</h1>
-    <p class="lead">
-      For classes, private sessions, or questions about whether this is the right fit, send an email.
-    </p>
-    <a class="button primary" href={`mailto:${site.email}`}>{site.email}</a>
+    <p class="eyebrow">{contactPage.eyebrow}</p>
+    <h1>{contactPage.title}</h1>
+    <p class="lead">{contactPage.intro}</p>
+    <a class="button primary" href={`mailto:${settings.email}`}>{settings.email}</a>
   </section>
 
   <section class="section container two-column">
     <div>
-      <h2>Location</h2>
-      <p>{site.location}</p>
-      <ImageFrame image={site.images.contact} variant="wide" />
+      <h2>{contactPage.locationTitle}</h2>
+      <p>{settings.location}</p>
+      <ImageFrame image={contactPage.image} variant="wide" />
     </div>
     <div class="prose">
-      <h2>Privacy note</h2>
-      <p>Please include only what you are comfortable sharing by email. Intake forms or booking tools can be added later if they become useful.</p>
-      <h2>Social</h2>
-      {site.socials.map((social) => <p><a href={social.url}>{social.label}</a></p>)}
+      <h2>{contactPage.privacyTitle}</h2>
+      <p>{contactPage.privacyText}</p>
+      <h2>{contactPage.socialTitle}</h2>
+      {settings.socials.map((social) => <p><a href={social.url}>{social.label}</a></p>)}
     </div>
   </section>
 </BaseLayout>

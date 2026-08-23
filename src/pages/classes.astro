@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageFrame from '../components/ImageFrame.astro';
-import { site } from '../content/site';
+import { classesPage } from '../content/site';
 ---
 
 <BaseLayout title="Classes" description="Group shibari classes at Love & Rope Studio.">
   <section class="page-hero container narrow">
-    <p class="eyebrow">Group learning</p>
-    <h1>Classes for skill, attention, and connection.</h1>
-    <p class="lead">Learn in a supportive environment where technique, consent, and communication are taught together.</p>
+    <p class="eyebrow">{classesPage.eyebrow}</p>
+    <h1>{classesPage.title}</h1>
+    <p class="lead">{classesPage.intro}</p>
   </section>
 
   <section class="section container card-grid">
-    {site.classes.map((classItem) => (
+    {classesPage.classes.map((classItem) => (
       <article class="card">
         <ImageFrame image={classItem.image} />
         <h2>{classItem.title}</h2>
@@ -23,21 +23,18 @@ import { site } from '../content/site';
 
   <section class="section container two-column">
     <div>
-      <h2>What to bring</h2>
+      <h2>{classesPage.bringTitle}</h2>
     </div>
     <div class="prose">
-      <p>Comfortable clothing that allows movement, water, a notebook if you like, and any rope you already own.</p>
-      <p>Loaner rope availability can be added here once class logistics are finalized.</p>
-      <ImageFrame image={site.images.invitation} variant="wide" />
+      {classesPage.bringText.map((paragraph) => <p>{paragraph}</p>)}
+      <ImageFrame image={classesPage.detailImage} variant="wide" />
     </div>
   </section>
 
   <section class="section consent-band">
     <div class="container narrow">
-      <h2>Safety expectations</h2>
-      <p>
-        Students are expected to participate with respect, sobriety, clear consent, and care for their own and their partner's limits. Suspension and advanced risk topics are not included unless explicitly listed for a class.
-      </p>
+      <h2>{classesPage.safetyTitle}</h2>
+      <p>{classesPage.safetyText}</p>
     </div>
   </section>
 </BaseLayout>

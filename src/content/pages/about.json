@@ -1,0 +1,22 @@
+{
+  "eyebrow": "About the teacher",
+  "title": "Warm instruction for intimate skills.",
+  "bio": "Teacher Name is a shibari educator offering group classes and private sessions for curious beginners, couples, and returning rope students. Their teaching centers communication, care, body awareness, and the slow art of building trust.",
+  "philosophyTitle": "Teaching philosophy",
+  "philosophy": [
+    "Desire is welcome, but never rushed.",
+    "Consent, communication, and risk awareness are part of every lesson.",
+    "Rope can be beautiful, playful, intimate, meditative, and technically precise."
+  ],
+  "experienceTitle": "Experience placeholder",
+  "experienceText": [
+    "Add details here about training history, teaching background, community involvement, and any relevant certifications or safety education.",
+    "This page can stay simple: a clear bio, values, and what students can expect are often more useful than a long resume."
+  ],
+  "image": {
+    "src": "/images/teacher/portrait-01.jpg",
+    "alt": "Portrait of the shibari teacher",
+    "label": "Teacher portrait",
+    "size": "1200 x 1500"
+  }
+}
