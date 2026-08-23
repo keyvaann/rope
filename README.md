@@ -36,6 +36,8 @@ Pages CMS is split into simple sections:
 
 The site currently shows styled image placeholders. You can replace them with real photos in Pages CMS.
 
+Current starter images and licenses are listed in `IMAGE_CREDITS.md`.
+
 When adding an image, also add clear alt text. Alt text should briefly describe the image for someone who cannot see it.
 
 Good examples:

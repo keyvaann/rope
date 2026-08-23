@@ -34,27 +34,27 @@
   "images": {
     "hero": {
       "src": "/images/hero/hero-01.jpg",
-      "alt": "Close detail of rope arranged on soft fabric",
-      "label": "Hero image",
-      "size": "2400 x 1600"
+      "alt": "Close-up of natural rope fibers",
+      "label": "Natural rope close-up",
+      "size": "1800 px wide"
     },
     "invitation": {
       "src": "/images/details/rope-detail-01.jpg",
-      "alt": "Rope detail in warm studio light",
-      "label": "Rope detail image",
-      "size": "1600 x 1000"
+      "alt": "Coiled rope arranged as a natural fiber detail",
+      "label": "Coiled rope detail",
+      "size": "1600 px wide"
     },
     "privateSession": {
       "src": "/images/private-sessions/session-01.jpg",
-      "alt": "Warm private teaching space with rope details",
-      "label": "Private session image",
-      "size": "1600 x 1200"
+      "alt": "Old cord detail with a soft neutral texture",
+      "label": "Private session rope detail",
+      "size": "1400 px wide"
     },
     "contact": {
       "src": "/images/details/fabric-detail-01.jpg",
-      "alt": "Soft fabric and rope detail",
-      "label": "Contact page detail image",
-      "size": "1600 x 1000"
+      "alt": "A simple knot photographed as a quiet rope detail",
+      "label": "Knot detail image",
+      "size": "1600 px wide"
     }
   }
 }

@@ -18,15 +18,6 @@ const imagePath = `${base.replace(/\/$/, '')}/${path}`;
 ---
 
 <figure class={`image-frame ${variant}`}>
-  <div class="image-placeholder" role="img" aria-label={image.alt}>
-    <span class="image-sheen" aria-hidden="true"></span>
-    <span class="placeholder-knot" aria-hidden="true"></span>
-    <span class="placeholder-copy">
-      <span class="placeholder-label">Image placeholder</span>
-      <strong>{image.label}</strong>
-      <small>Replace with: {imagePath}</small>
-      <small>Recommended: {image.size}</small>
-    </span>
-  </div>
+  <img src={imagePath} alt={image.alt} loading="lazy" />
   <figcaption>{image.alt}</figcaption>
 </figure>

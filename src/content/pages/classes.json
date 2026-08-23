@@ -8,9 +8,9 @@
       "description": "Learn core rope handling, communication, simple ties, and safety practices in a supportive beginner-friendly setting.",
       "image": {
         "src": "/images/classes/class-01.jpg",
-        "alt": "Hands demonstrating a beginner rope tie",
-        "label": "Beginner class image",
-        "size": "1600 x 1200"
+        "alt": "Natural rope arranged for beginner rope handling practice",
+        "label": "Beginner rope detail",
+        "size": "1600 px wide"
       }
     },
     {
@@ -18,9 +18,9 @@
       "description": "Explore pacing, attention, negotiation, and presence through accessible exercises for partners and self-tying students.",
       "image": {
         "src": "/images/classes/class-02.jpg",
-        "alt": "Two people practicing rope communication in a class setting",
-        "label": "Connection class image",
-        "size": "1600 x 1200"
+        "alt": "Traditional rope photographed as a natural fiber study",
+        "label": "Traditional rope image",
+        "size": "1600 px wide"
       }
     },
     {
@@ -28,9 +28,9 @@
       "description": "A gentle introduction to elegant shapes, body-aware tension, and expressive ties without suspension.",
       "image": {
         "src": "/images/classes/class-03.jpg",
-        "alt": "Decorative rope detail arranged on fabric",
-        "label": "Decorative rope image",
-        "size": "1600 x 1200"
+        "alt": "A handy length of rope arranged outdoors",
+        "label": "Simple rope detail",
+        "size": "1400 px wide"
       }
     }
   ],
@@ -41,9 +41,9 @@
   ],
   "detailImage": {
     "src": "/images/details/rope-detail-01.jpg",
-    "alt": "Rope detail in warm studio light",
-    "label": "Rope detail image",
-    "size": "1600 x 1000"
+    "alt": "Coiled rope arranged as a natural fiber detail",
+    "label": "Coiled rope detail",
+    "size": "1600 px wide"
   },
   "safetyTitle": "Safety expectations",
   "safetyText": "Students are expected to participate with respect, sobriety, clear consent, and care for their own and their partner's limits. Suspension and advanced risk topics are not included unless explicitly listed for a class."
