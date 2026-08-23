@@ -26,7 +26,6 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
     <header class="site-header">
       <nav class="nav container" aria-label="Main navigation">
         <a class="brand" href={withBase('/')}>
-          <span class="brand-mark" aria-hidden="true"></span>
           <span>{settings.name}</span>
         </a>
         <div class="nav-links">
