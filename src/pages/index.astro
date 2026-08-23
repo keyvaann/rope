@@ -4,6 +4,7 @@ import ImageFrame from '../components/ImageFrame.astro';
 import { site } from '../content/site';
 
 const base = import.meta.env.BASE_URL;
+const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
 ---
 
 <BaseLayout title={site.name} description={site.intro}>
@@ -14,8 +15,8 @@ const base = import.meta.env.BASE_URL;
         <h1>Rope as connection, trust, and desire.</h1>
         <p class="lead">{site.intro}</p>
         <div class="button-row">
-          <a class="button primary" href={`${base}private-sessions/`}>Private Sessions</a>
-          <a class="button secondary" href={`${base}classes/`}>View Classes</a>
+          <a class="button primary" href={withBase('/private-sessions/')}>Private Sessions</a>
+          <a class="button secondary" href={withBase('/classes/')}>View Classes</a>
         </div>
       </div>
       <ImageFrame image={site.images.hero} variant="portrait" />
@@ -44,19 +45,19 @@ const base = import.meta.env.BASE_URL;
         <ImageFrame image={site.classes[0].image} />
         <h3>Group Classes</h3>
         <p>Beginner-friendly rope foundations, partner communication, and decorative floor-based ties.</p>
-        <a href={`${base}classes/`}>Explore classes</a>
+        <a href={withBase('/classes/')}>Explore classes</a>
       </article>
       <article class="card">
         <ImageFrame image={site.images.privateSession} />
         <h3>Private Sessions</h3>
         <p>Personalized lessons for individuals, couples, and small groups who want a quieter learning container.</p>
-        <a href={`${base}private-sessions/`}>Book by email</a>
+        <a href={withBase('/private-sessions/')}>Book by email</a>
       </article>
       <article class="card">
         <ImageFrame image={site.images.contact} />
         <h3>Consent First</h3>
         <p>Every class includes negotiation, body awareness, risk education, and aftercare-minded communication.</p>
-        <a href={`${base}about/`}>Read the approach</a>
+        <a href={withBase('/about/')}>Read the approach</a>
       </article>
     </div>
   </section>
