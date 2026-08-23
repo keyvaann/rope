@@ -22,10 +22,7 @@ html {
 }
 
 body {
-  background:
-    linear-gradient(90deg, rgb(200 181 139 / 18%) 1px, transparent 1px),
-    linear-gradient(180deg, var(--paper), var(--page));
-  background-size: 1.25rem 1.25rem, auto;
+  background: linear-gradient(180deg, var(--paper), var(--page));
   margin: 0;
   min-height: 100vh;
 }
@@ -121,7 +118,7 @@ p {
 
 .site-header {
   background: var(--paper);
-  border-bottom: 2px solid var(--line-dark);
+  border-bottom: 1px solid var(--line);
   padding-block: 0.9rem;
 }
 
@@ -183,20 +180,18 @@ p {
 .price-card,
 .contact-panel {
   background: var(--paper);
-  border: 1px solid var(--line);
 }
 
 .page-hero,
 .invitation-panel,
 .contact-panel {
   margin-block: 1.25rem;
-  padding: clamp(1rem, 4vw, 1.5rem);
+  padding-block: clamp(1rem, 4vw, 1.5rem);
 }
 
 .hero-feature .container {
   background: var(--paper);
-  border: 1px solid var(--line);
-  padding: clamp(1rem, 4vw, 1.5rem);
+  padding-block: clamp(1rem, 4vw, 1.5rem);
 }
 
 .hero-grid,
@@ -228,7 +223,6 @@ p {
 
 .eyebrow {
   background: var(--accent-soft);
-  border: 1px solid var(--line);
   color: var(--accent);
   display: inline-block;
   font-size: 0.72rem;
@@ -312,7 +306,7 @@ p {
     linear-gradient(45deg, rgb(201 181 138 / 22%) 25%, transparent 25%, transparent 50%, rgb(201 181 138 / 22%) 50%, rgb(201 181 138 / 22%) 75%, transparent 75%, transparent),
     var(--accent-soft);
   background-size: 20px 20px, auto;
-  border: 1px solid var(--line-dark);
+  border: 1px solid var(--line);
   color: var(--ink);
   display: flex;
   flex-direction: column;
@@ -342,7 +336,6 @@ p {
 
 .placeholder-copy {
   background: rgb(255 255 255 / 92%);
-  border: 1px solid var(--line);
   padding: 0.65rem;
   position: relative;
   width: min(100%, 20rem);
@@ -376,18 +369,15 @@ p {
 }
 
 .image-frame figcaption {
-  border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.45;
   margin-top: 0.45rem;
-  padding-bottom: 0.45rem;
 }
 
 .blush-panel,
 .consent-band {
-  background: var(--accent-soft);
-  border-block: 1px solid var(--line);
+  background: rgb(246 240 229 / 55%);
 }
 
 .card-grid,
@@ -400,14 +390,13 @@ p {
 .card,
 .quote-card,
 .price-card {
-  padding: 0.85rem;
+  padding-block: 0.35rem;
 }
 
 .card h2,
 .card h3,
 .price-card strong {
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.35rem;
+  padding-bottom: 0;
 }
 
 .card p,
@@ -450,7 +439,7 @@ p {
 
 .site-footer {
   background: var(--fiber);
-  border-top: 2px solid var(--line-dark);
+  border-top: 1px solid var(--line);
   color: var(--muted);
   margin-top: 2rem;
   padding-block: 1.5rem;
