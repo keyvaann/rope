@@ -26,7 +26,6 @@ content:
       - name: email
         label: Email Address
         type: string
-        required: true
       - name: location
         label: Location
         type: string
@@ -90,7 +89,15 @@ content:
             type: string
           - name: imageKey
             label: Image Key
-            type: string
+            type: select
+            options:
+              values:
+                - value: classOne
+                  label: First Class Image
+                - value: privateSession
+                  label: Private Session Image
+                - value: contact
+                  label: Contact Detail Image
       - name: images
         label: Page Images
         type: object

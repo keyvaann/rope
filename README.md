@@ -103,6 +103,12 @@ Build the site:
 npm run build
 ```
 
+Check types and build together:
+
+```bash
+npm run check
+```
+
 GitHub Pages deployment is handled by:
 
 ```text

@@ -143,10 +143,6 @@ p {
   color: var(--accent);
 }
 
-.brand-mark {
-  display: none;
-}
-
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -263,11 +259,6 @@ p {
   color: var(--ink);
 }
 
-.hero-card,
-.orb {
-  display: none;
-}
-
 .invitation-panel {
   position: relative;
 }
@@ -296,16 +287,6 @@ p {
 
 .image-frame.wide img {
   aspect-ratio: 16 / 10;
-}
-
-.hero-feature .image-frame::before,
-.invitation-panel::before,
-.invitation-panel::after,
-.card::before,
-.quote-card::before,
-.price-card::before,
-.contact-panel::before {
-  display: none;
 }
 
 .prose .image-frame {

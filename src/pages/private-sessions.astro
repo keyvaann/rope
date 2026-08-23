@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageFrame from '../components/ImageFrame.astro';
 import { privateSessionsPage, settings } from '../content/site';
+
+const base = import.meta.env.BASE_URL;
+const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
+const inquiryHref = settings.email ? `mailto:${settings.email}?subject=Private%20Session%20Inquiry` : withBase('/contact/');
 ---
 
 <BaseLayout title="Private Sessions" description="Private shibari instruction for individuals, couples, and small groups.">
@@ -10,9 +14,9 @@ import { privateSessionsPage, settings } from '../content/site';
       <p class="eyebrow">{privateSessionsPage.eyebrow}</p>
       <h1>{privateSessionsPage.title}</h1>
       <p class="lead">{privateSessionsPage.intro}</p>
-      <a class="button primary" href={`mailto:${settings.email}?subject=Private%20Session%20Inquiry`}>Email to inquire</a>
+      <a class="button primary" href={inquiryHref}>Inquire about sessions</a>
     </div>
-    <ImageFrame image={privateSessionsPage.image} variant="portrait" />
+    <ImageFrame image={privateSessionsPage.image} variant="portrait" priority />
   </section>
 
   <section class="section container two-column">

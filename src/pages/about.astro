@@ -4,14 +4,14 @@ import ImageFrame from '../components/ImageFrame.astro';
 import { aboutPage, settings } from '../content/site';
 ---
 
-<BaseLayout title="About" description={`About ${settings.teacherName} and ${settings.name}.`}>
+<BaseLayout title="About" description={`${settings.name} teaching philosophy, values, and student expectations.`}>
   <section class="page-hero container hero-grid">
     <div>
       <p class="eyebrow">{aboutPage.eyebrow}</p>
       <h1>{aboutPage.title}</h1>
       <p class="lead">{aboutPage.bio}</p>
     </div>
-    <ImageFrame image={aboutPage.image} variant="portrait" />
+    <ImageFrame image={aboutPage.image} variant="portrait" priority />
   </section>
 
   <section class="section container two-column">

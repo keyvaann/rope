@@ -11,6 +11,9 @@ const { title = settings.name, description = settings.tagline } = Astro.props;
 const pageTitle = title === settings.name ? settings.name : `${title} | ${settings.name}`;
 const base = import.meta.env.BASE_URL;
 const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
+const siteUrl = Astro.site ?? new URL('https://keyvaann.github.io');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const socialImageUrl = new URL(withBase('/images/hero/hero-01.jpg'), siteUrl).toString();
 ---
 
 <!doctype html>
@@ -19,6 +22,18 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <meta property="og:site_name" content={settings.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -44,7 +59,7 @@ const withBase = (href: string) => `${base.replace(/\/$/, '')}/${href.replace(/^
         </div>
         <div>
           <p>{settings.location}</p>
-          <a href={`mailto:${settings.email}`}>{settings.email}</a>
+          {settings.email ? <a href={`mailto:${settings.email}`}>{settings.email}</a> : <p>Email address coming soon.</p>}
         </div>
       </div>
     </footer>

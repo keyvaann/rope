@@ -9,14 +9,34 @@ interface ImageInfo {
 interface Props {
   image: ImageInfo;
   variant?: 'landscape' | 'portrait' | 'wide';
+  priority?: boolean;
 }
 
-const { image, variant = 'landscape' } = Astro.props;
+const { image, variant = 'landscape', priority = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const path = image.src.replace(/^\//, '');
 const imagePath = `${base.replace(/\/$/, '')}/${path}`;
+const imageDimensions: Record<string, { width: number; height: number }> = {
+  '/images/hero/hero-01.jpg': { width: 1920, height: 1440 },
+  '/images/details/rope-detail-01.jpg': { width: 1920, height: 1440 },
+  '/images/details/fabric-detail-01.jpg': { width: 1920, height: 1440 },
+  '/images/classes/class-01.jpg': { width: 1920, height: 1280 },
+  '/images/classes/class-02.jpg': { width: 1795, height: 3107 },
+  '/images/classes/class-03.jpg': { width: 800, height: 600 },
+  '/images/private-sessions/session-01.jpg': { width: 1000, height: 572 },
+  '/images/teacher/about-01.jpg': { width: 1920, height: 1280 },
+};
+const dimensions = imageDimensions[image.src];
 ---
 
 <figure class={`image-frame ${variant}`}>
-  <img src={imagePath} alt={image.alt} loading="lazy" />
+  <img
+    src={imagePath}
+    alt={image.alt}
+    width={dimensions?.width}
+    height={dimensions?.height}
+    loading={priority ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={priority ? 'high' : 'auto'}
+  />
 </figure>

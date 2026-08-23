@@ -10,6 +10,7 @@ const cardImages = {
   privateSession: homePage.images.privateSession,
   contact: homePage.images.contact,
 };
+const getCardImage = (imageKey: string) => cardImages[imageKey as keyof typeof cardImages] ?? homePage.images.invitation;
 ---
 
 <BaseLayout title={settings.name} description={homePage.intro}>
@@ -24,7 +25,7 @@ const cardImages = {
           <a class="button secondary" href={withBase('/classes/')}>View Classes</a>
         </div>
       </div>
-      <ImageFrame image={homePage.images.hero} variant="portrait" />
+      <ImageFrame image={homePage.images.hero} variant="portrait" priority />
     </div>
   </section>
 
@@ -43,7 +44,7 @@ const cardImages = {
     <div class="container card-grid">
       {homePage.cards.map((card) => (
         <article class="card">
-          <ImageFrame image={cardImages[card.imageKey]} />
+          <ImageFrame image={getCardImage(card.imageKey)} />
           <h3>{card.title}</h3>
           <p>{card.description}</p>
           <a href={withBase(card.href)}>{card.linkLabel}</a>

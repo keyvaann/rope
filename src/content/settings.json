@@ -1,13 +1,8 @@
 {
   "name": "Love & Rope Studio",
   "tagline": "Shibari education rooted in trust, desire, and care.",
-  "teacherName": "Teacher Name",
-  "email": "hello@example.com",
-  "location": "City, Region",
-  "socials": [
-    {
-      "label": "Instagram",
-      "url": "https://instagram.com/placeholder"
-    }
-  ]
+  "teacherName": "Love & Rope Studio",
+  "email": "",
+  "location": "Location shared after inquiry",
+  "socials": []
 }

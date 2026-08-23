@@ -5,7 +5,21 @@ import homeContent from './pages/home.json';
 import privateSessionsContent from './pages/private-sessions.json';
 import settingsContent from './settings.json';
 
-export const settings = settingsContent;
+interface SocialLink {
+  label: string;
+  url: string;
+}
+
+interface SettingsContent {
+  name: string;
+  tagline: string;
+  teacherName: string;
+  email: string;
+  location: string;
+  socials: SocialLink[];
+}
+
+export const settings = settingsContent as SettingsContent;
 export const homePage = homeContent;
 export const aboutPage = aboutContent;
 export const classesPage = classesContent;

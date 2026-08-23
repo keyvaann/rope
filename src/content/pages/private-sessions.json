@@ -8,15 +8,15 @@
     "Couples sessions focused on communication, confidence, and shared vocabulary.",
     "Small private groups for friends or partners who want a quieter learning environment."
   ],
-  "pricingEyebrow": "Placeholder pricing",
+  "pricingEyebrow": "Session options",
   "pricing": [
     {
       "label": "Private session",
-      "price": "$000 / 90 minutes"
+      "price": "Email for current rate"
     },
     {
       "label": "Couples session",
-      "price": "$000 / 2 hours"
+      "price": "Email for current rate"
     },
     {
       "label": "Small private group",
