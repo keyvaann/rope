@@ -14,9 +14,9 @@
     "This page can stay simple: a clear bio, values, and what students can expect are often more useful than a long resume."
   ],
   "image": {
-    "src": "/images/teacher/portrait-01.jpg",
-    "alt": "Natural rope detail used until a teacher portrait is added",
-    "label": "Teacher page rope detail",
+    "src": "/images/teacher/about-01.jpg",
+    "alt": "Natural rope detail for the about page",
+    "label": "About page rope detail",
     "size": "1400 px wide"
   }
 }

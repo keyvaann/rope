@@ -1,4 +1,4 @@
-Place public images in this folder. The current site shows styled placeholders until real images are added and wired in.
+Place public images in this folder. The site includes starter images that can be replaced in Pages CMS.
 
 Recommended folder structure:
 
@@ -7,7 +7,7 @@ public/images/
   hero/
     hero-01.jpg
   teacher/
-    portrait-01.jpg
+    about-01.jpg
   classes/
     class-01.jpg
     class-02.jpg
@@ -22,7 +22,7 @@ public/images/
 Recommended dimensions:
 
 - Hero images: `2400 x 1600`
-- Teacher portrait: `1200 x 1500`
+- About page image or teacher portrait: `1200 x 1500`
 - Class and session cards: `1600 x 1200`
 - Detail images: `1600 x 1000`
 

@@ -27,14 +27,14 @@ Pages CMS is split into simple sections:
 
 - `Site Settings`: studio name, teacher name, email, location, and social links
 - `Home Page`: homepage headline, introduction, feature cards, and homepage images
-- `About Page`: teacher bio, teaching philosophy, experience text, and portrait image
+- `About Page`: teacher bio, teaching philosophy, experience text, and about page image
 - `Classes Page`: class descriptions, what to bring, and safety expectations
 - `Private Sessions Page`: private session text, pricing, and preparation notes
 - `Contact Page`: contact text, privacy note, location, social link, and contact image
 
 ## Adding Images
 
-The site currently shows styled image placeholders. You can replace them with real photos in Pages CMS.
+The site includes starter images. You can replace them with your own photos in Pages CMS.
 
 Current starter images and licenses are listed in `IMAGE_CREDITS.md`.
 
@@ -49,13 +49,13 @@ Good examples:
 Recommended image sizes:
 
 - Hero images: `2400 x 1600`
-- Teacher portrait: `1200 x 1500`
+- About page image or teacher portrait: `1200 x 1500`
 - Class and session cards: `1600 x 1200`
 - Detail images: `1600 x 1000`
 
 ## What To Update First
 
-Before sharing the site publicly, update these placeholders:
+Before sharing the site publicly, update this starter content:
 
 - Studio name
 - Teacher name

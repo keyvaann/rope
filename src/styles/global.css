@@ -316,82 +316,6 @@ p {
   margin: -0.65rem -0.65rem 0.9rem;
 }
 
-.image-placeholder {
-  align-items: flex-start;
-  aspect-ratio: 4 / 3;
-  background:
-    linear-gradient(45deg, rgb(201 181 138 / 22%) 25%, transparent 25%, transparent 50%, rgb(201 181 138 / 22%) 50%, rgb(201 181 138 / 22%) 75%, transparent 75%, transparent),
-    var(--accent-soft);
-  background-size: 20px 20px, auto;
-  border: 1px solid var(--line);
-  color: var(--ink);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 12rem;
-  overflow: hidden;
-  padding: 0.7rem;
-  position: relative;
-}
-
-.image-frame.portrait .image-placeholder {
-  aspect-ratio: 4 / 5;
-  min-height: 21rem;
-}
-
-.image-frame.wide .image-placeholder {
-  aspect-ratio: 16 / 10;
-}
-
-.image-placeholder::before,
-.image-placeholder::after,
-.image-sheen,
-.placeholder-knot,
-.placeholder-knot::after {
-  display: none;
-}
-
-.placeholder-copy {
-  background: rgb(255 255 255 / 92%);
-  padding: 0.65rem;
-  position: relative;
-  width: min(100%, 20rem);
-  z-index: 1;
-}
-
-.placeholder-label {
-  color: var(--accent);
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.35rem;
-  text-transform: uppercase;
-}
-
-.image-placeholder strong {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-}
-
-.image-placeholder small {
-  color: var(--muted);
-  display: block;
-  font-size: 0.78rem;
-  line-height: 1.4;
-}
-
-.image-frame figcaption {
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.45;
-  margin-top: 0.45rem;
-}
-
 .blush-panel,
 .consent-band {
   background: rgb(246 240 229 / 55%);
@@ -487,9 +411,5 @@ p {
   .card-grid,
   .price-grid {
     grid-template-columns: 1fr;
-  }
-
-  .image-frame.portrait .image-placeholder {
-    min-height: 17rem;
   }
 }

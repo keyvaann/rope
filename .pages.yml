@@ -108,10 +108,10 @@ content:
                 label: Alt Text
                 type: string
               - name: label
-                label: Placeholder Label
+                label: Internal Image Label
                 type: string
               - name: size
-                label: Recommended Size
+                label: Editor Size Note
                 type: string
           - name: invitation
             label: Invitation Image
@@ -153,7 +153,7 @@ content:
         type: text
         list: true
       - name: image
-        label: Teacher Image
+        label: About Page Image
         type: object
         fields: *imageFields
 
